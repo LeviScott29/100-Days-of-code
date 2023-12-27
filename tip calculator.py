@@ -8,4 +8,5 @@ print(tip_by_percent)
 total_bill= (bill)+(bill*tip_by_percent)
 print(total_bill)
 split_bill= total_bill/people
-print ("each person owes:", split_bill)
+final_amount= round(split_bill, 2)
+print ("each person owes:", final_amount)
