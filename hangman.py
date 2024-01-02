@@ -38,7 +38,7 @@ while play_again != "no":
             lives=lives-1
             print("you have ", lives, " lives left")
         if lives == 0:
-            print("you lose")
+            print(" you are out of lives \n your word was : ", chosen_word, "\n you lose")
             break
 
         if "_" not in display:
