@@ -12,8 +12,9 @@ while play_again=="yes":
     def ceaser( word, shift, direction):
         cipher_text=""
         if direction == "encode":
-    #this iterates over the input and uses the list alphabet to reference letter positions using the index position
-    #it then adds the shift value to the index and replaces the letter with the new index element for the output
+    # this iterates over the input and uses the list alphabet to reference letter positions using the index position
+    # it then adds the shift value to the index and replaces the letter with the new index element for the output
+    # if the input is not a letter it just appends it to the new phrase
         
             for char in word:
                 if char in alphabet:
@@ -25,8 +26,9 @@ while play_again=="yes":
             print("your encrypted message is: ", cipher_text)
 
         if direction == "decode":
-    #this iterates over the input and uses the list alphabet to reference letter positions using the index position
-    #it then subtracts the shift value to the index and replaces the letter with the new index element for the output
+    # this iterates over the input and uses the list alphabet to reference letter positions using the index position
+    # it then subtracts the shift value to the index and replaces the letter with the new index element for the output
+    # if the input is not a letter it just appends it to the new phrase
             for char in word:
                 if char in alphabet:
                    position = alphabet.index(char)
