@@ -49,6 +49,7 @@ while end =="no":
         if outer_choice in allowed_words:
             break
         else: print(" you can only choose 'exit', 'start over' or 'continue'")
+            
     if outer_choice == "exit":
         end="yes"
     elif outer_choice =="start over":
