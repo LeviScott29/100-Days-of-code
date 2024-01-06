@@ -16,16 +16,18 @@ while play_again != "no":
     length = len(chosen_word)
     image_location= 6
     word_length = length
-
+#fills the list display with underscores the length of chosen word
     for _ in range(length):
         display +="_"
     print(display)
+    
     end_of_game = False
     while not end_of_game:
         guess= input("guess a letter or type quit to exit: \n").lower()
         if guess == "quit":
             break
-
+#iterates over chosen word and checks if letter picked is in the word 
+#then updates display list if correct letter is chosen
         for position in range(length):
             letter = chosen_word[position]
             if letter == guess:
