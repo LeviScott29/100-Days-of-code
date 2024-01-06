@@ -9,6 +9,7 @@ letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
+#chooses random letters, numbers, and symbols to add to password list
 password_list=[]
 for i in range(0, nr_letters):
     random_letters=random.choice(letters)
@@ -23,7 +24,7 @@ for i in range(0, nr_symbols):
     password_list +=random_symbols
 
 random.shuffle(password_list)
-
+#takes elements of password list and concatenates them into a string of characters
 password=""
 for i in password_list:
     password+=i
