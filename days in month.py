@@ -20,7 +20,7 @@ def days_in_month(year, month):
         return ("there is 29 days")
     else: return ("this month has", days), "days"
     
-        
+#this function checks if a year is a leap year   
 def is_leap(year):
 
     lpc1 = year % 4
