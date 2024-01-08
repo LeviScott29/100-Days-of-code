@@ -3,7 +3,9 @@ This has my projects from a 100 days of code program
 
 Auction: TAsks user input for name and bid then asks if more there are more people once all people have entered a bid it finds the highest bid and prints the winner and bid.
 
-Band Name Generator: asks user for a city and a pet name, concatenates them and prints result.
+Band Name Generator: asks user for a city and a pet name, concatenates them and prints result.'
+
+BlackJack: play a game of BlackJack with a computer.
 
 Calculator: has a user input two numbers and the mathematical operation they want to perform and returns the result then asks the user if they want to quit, start over, or continue. if the user chooses exit it ends the program. If the user chooses start over it starts frfom the beginning. If the user chooses continue it will use the output of the previous operation and a new input number and operation to continue performing operations. 
 
