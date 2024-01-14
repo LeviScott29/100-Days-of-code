@@ -17,6 +17,8 @@ FizzBuzz: Takes user input for a number then counts to input number replacing ea
 
 Hangman: Picks a random word from a list then has the user try to guess the word before the lives run out.
 
+High or Low: play a game of high or low between 1 and 100, it has two difficulty based on amount of guesses allowed and keeps track of already guessed numbers.
+
 Leap Year: Takes a input of a year from the user and prints out if it is a leap year or not.
 
 Love Calculator: Has a user input two names then counts how many times the letters in "true" and "love" occur in the names then concatenates the two results to prints their "love score".
