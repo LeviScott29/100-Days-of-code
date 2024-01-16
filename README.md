@@ -9,6 +9,8 @@ BlackJack: play a game of BlackJack with a computer.
 
 Calculator: has a user input two numbers and the mathematical operation they want to perform and returns the result then asks the user if they want to quit, start over, or continue. if the user chooses exit it ends the program. If the user chooses start over it starts frfom the beginning. If the user chooses continue it will use the output of the previous operation and a new input number and operation to continue performing operations. 
 
+Coffee machine: this program works like a simulation of a digital coffee vending machine and offers 3 types of drinks. the program will keep track of coffee making resources being used and ask for payment in change. Includes functions to check resource levels, refill resources, and turn off machine. 
+
 Days In Month: takes an input from the user for the year they want to check and the month they want to check. The program will check if the year entered is a leap year then print out how many days are in the month selected.
 
 Encoder: Has a user input string of words and have the user choose the amount they want to shift the letters in the alphabet and if they want to encode or decode (shift up or down the alphabet) to encode them using a ceaser cipher.
