@@ -1,3 +1,4 @@
+#dictionary of coffee types, price, and resource requirments
 MENU = {
     "espresso": {
         "ingredients": {
@@ -23,14 +24,15 @@ MENU = {
         "cost": 3.0,
     }
 }
-
+#dictionary of available resources
 resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
 }
 
-
+#this function will tell you cost of your coffee and ask for money from user then check if it is enough 
+#if there is enough it will give back any change and remove required resources to make coffee from stock
 def money(coffee_type):
     print("your", coffee_type, "is", MENU[coffee_type]["cost"])
     penny = .01
@@ -61,7 +63,7 @@ def money(coffee_type):
         print("you do not have enough money")
         print("here is your change back:", total_change)
 
-
+# this function checks if stock has enough resources for requested coffee and tell you what resource is missing if not
 def coffee_option(choices):
     if choices == "espresso":
         if MENU["espresso"]["ingredients"]["water"] < resources["water"] and MENU["espresso"]["ingredients"]["coffee"] < \
@@ -85,6 +87,7 @@ def coffee_option(choices):
 
 
 power = "on"
+#this offers options for checking resource levels, refilling resources, turning off machine, and choosing coffee type
 while power != "off":
     choice = input("what would you like? espresso, cappuccino, or latte?: ")
     if choice == "off":
