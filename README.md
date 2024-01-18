@@ -36,4 +36,7 @@ Rock Paper Scissors: the user can play rock paper scissors against a computer.
 Tip Calculator: Has the user input the total bill, how many people there are, and what percentage they want to tip and will print out the tip amount.
 
 Treasure Island Text Game: a multichoice text adventure to find treasure.
+
 Treasure Map: Has a user place an X on a 3X3 grid by choosing a letter and a number. 
+
+Turtle: has visual graphic of turtle choose random spots on a screen to draw spiralgraphs that change colors
