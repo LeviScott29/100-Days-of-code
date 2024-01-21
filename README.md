@@ -27,6 +27,8 @@ Leap Year: Takes a input of a year from the user and prints out if it is a leap 
 
 Love Calculator: Has a user input two names then counts how many times the letters in "true" and "love" occur in the names then concatenates the two results to prints their "love score".
 
+NATO_phonetic: this program reads a csv of letters and their NATO phonetic counterparts then places it in a dictionary so when a user inputs a word it can return the phonetic words for each letter.
+
 Password Randomizer: Has the user input how many letter, numbers, and special characters they want in their password and generates a random password for them. 
 
 Prime Number Check: Has the user input a number and prints whether the number is a prime number or not.
