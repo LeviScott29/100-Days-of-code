@@ -33,6 +33,8 @@ NATO_phonetic: this program reads a csv of letters and their NATO phonetic count
 
 Password Randomizer: Has the user input how many letter, numbers, and special characters they want in their password and generates a random password for them. 
 
+Pomodoro: this program has a GUI for a timer to implement the pomodoro study technique.
+
 Prime Number Check: Has the user input a number and prints whether the number is a prime number or not.
 
 Rock Paper Scissors: the user can play rock paper scissors against a computer.
