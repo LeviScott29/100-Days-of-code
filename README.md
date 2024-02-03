@@ -31,6 +31,9 @@ Love Calculator: Has a user input two names then counts how many times the lette
 
 NATO_phonetic: this program reads a csv of letters and their NATO phonetic counterparts then places it in a dictionary so when a user inputs a word it can return the phonetic words for each letter.
 
+Password_manager: this program is a basic password manager that gives the user a GUI to input the website, their username, and will allow to either manually enter a password or will autogenerate a password for you
+then save the entered information into a text document that records all your usernames and passwords for any website.
+
 Password Randomizer: Has the user input how many letter, numbers, and special characters they want in their password and generates a random password for them. 
 
 Pomodoro: this program has a GUI for a timer to implement the pomodoro study technique.
