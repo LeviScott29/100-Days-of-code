@@ -3,6 +3,7 @@ from tkinter import messagebox
 import random
 import string
 import pyperclip
+import json
 
 letters = []
 numbers = []
@@ -13,6 +14,20 @@ for i in string.digits:
 for i in string.ascii_letters:
     letters.append(i)
 
+# ---------------------------- SEARCH FUNCTION------------------------------- #
+def search():
+    entry = text_web.get()
+    try:
+        with open("database.json", "r") as file:
+            read = json.load(file)
+            if entry in read:
+                email = read[entry]["email"]
+                password = read[entry]["password"]
+                messagebox.showinfo(title=entry, message=f"Email: {email} \n \nPassword: {password}")
+            else:
+                messagebox.showerror(title="error", message=f"{entry} does not exist")
+    except FileNotFoundError:
+        print("file not found")
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generator():
@@ -36,22 +51,34 @@ def save_entry():
     website = text_web.get()
     user = text_user.get()
     password = text_pass.get()
+    new_data = {
+        website: {
+            "email": user,
+            "password": password,
+        }
+    }
     if len(password) == 0 or len(user) == 0:
         if len(password) == 0:
             messagebox.showerror(title=website, message="password box is empty")
         elif len(user) == 0:
             messagebox.showerror(title=website, message="username/email box is empty")
     else:
+        try:
+            with open("database.json", "r") as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            with open("database.json", "w") as file:
+                json.dump(new_data, file, indent=4)
+        else:
+            data.update(new_data)
 
-        is_ok = messagebox.askokcancel(title=website, message=f" these are the details entered {user} {password} is this correct?")
-        if is_ok:
-            with open ("database.txt", 'a') as file:
-                file.write(f"{website} | {user} | {password}\n")
+            with open("database.json", "w") as file:
+                json.dump(data, file, indent=4)
+        finally:
             text_web.delete(0, END)
             text_user.delete(0, END)
             text_pass.delete(0, END)
             pass_added.config(text="information added")
-
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -84,15 +111,18 @@ button_pass = Button(text="Generate Password", command=generator)
 button_add = Button(text="Add", width=45, command=save_entry)
 button_pass.grid(column=2, row=3, sticky="w")
 button_add.grid(column=1, row=4, columnspan=2, sticky="w")
+button_search = Button(text="search", width=14, command=search)
+button_search.grid(column=2, row=1)
+
 
 #text boxes
-text_web = Entry(width=53)
+text_web = Entry(width=34)
 text_web.grid(column=1, row=1, columnspan=2, sticky="w")
 text_web.focus()
 text_user = Entry(width=53)
 text_user.grid(column=1, row=2, columnspan=2, sticky="w")
 text_user.insert(0, "somebody@gmail.com")
-text_pass = Entry(width=35)
+text_pass = Entry(width=33)
 text_pass.grid(column=1, row=3)
 
 
