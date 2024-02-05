@@ -19,6 +19,8 @@ Encoder: Has a user input string of words and have the user choose the amount th
 
 FizzBuzz: Takes user input for a number then counts to input number replacing each number divisible by 3 with the word Fizz, numbers divisible by 5 with the word Buzz and numbers divisible by both with the word FizzBuzz.
 
+Flashcards: this is a GUI that presents a flash card of a french word and after 3 seconds will show you the english word, it has two buttons one which will remove the current word from the card stack and present the next card and a button which will just present the next card. when a card is removed from the stack the remaining stack is placed into a new document which will be loaded up upon running the program again intead of the full stack to keep track of which words you know and don't.
+
 Hangman: Picks a random word from a list then has the user try to guess the word before the lives run out.
 
 High or Low: play a game of high or low between 1 and 100, it has two difficulty based on amount of guesses allowed and keeps track of already guessed numbers.
