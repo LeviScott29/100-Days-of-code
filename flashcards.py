@@ -2,23 +2,18 @@ from tkinter import *
 import pandas as pd
 import random
 BACKGROUND_COLOR = "#B1DDC6"
+#checks for file with remaining words to learn
 try:
     df = pd.read_csv(r"C:\Users\angel\Desktop\100 days of code\flashcards\data\words_to_learn")
     flash_dict = df.to_dict(orient='records')
-
+#if words_to_learn doesn't exist runs source file
 except FileNotFoundError:
     df = pd.read_csv(r"data/french_words.csv")
     flash_dict = df.to_dict(orient='records')
 window = Tk()
 current_card = {}
 
-
-def english_word(choice):
-    canvas.itemconfig(image_item, image= card_back)
-    canvas.itemconfig(language, text="English", fill="white")
-    english = choice.get('English')
-    canvas.itemconfig(word, text=english, fill="white")
-
+#takes random dictionary entry and presents the french word after 3 seconds changes screen and presents english word
 
 def french_word():
     global current_card
@@ -30,6 +25,14 @@ def french_word():
     window.after(3000, lambda: english_word(current_card))
 
 
+def english_word(choice):
+    canvas.itemconfig(image_item, image= card_back)
+    canvas.itemconfig(language, text="English", fill="white")
+    english = choice.get('English')
+    canvas.itemconfig(word, text=english, fill="white")
+
+
+#removes word presently shown from dictionary
 def known_word():
     flash_dict.remove(current_card)
     data = pd.DataFrame(flash_dict)
